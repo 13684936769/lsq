@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
+    <style>
+        ul{list-style:none;}
+        #wraper{width:980px;height:500px;position:absolute;top:0;bottom:0;left:0;right:0;margin:auto; }
+        #wraper li{float:left;}
+        .item{width:196px;height:100px;background-size: cover;}
+    </style>
+    <script>
+        $(function () {
+
+            var wraper=$("#wraper")
+            //在ul里面生成24个li，每个li里面的图片不一样
+            var n=[0,]
+            for(var i=0;i<25;i++){
+                var li='<li><div class="item"></div></li>';
+                $(li).appendTo( wraper).find("div").css("backgroundImage","url(images/"+i+".jpg)");
+            };
+        })
+    </script>
+</head>
+<body>
+    <ul id="wraper">
+        <!--<li><div class="item" style="background-image: url('images/0.jpg')"></div></li>-->
+    </ul>
+</body>
+</html>
